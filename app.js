@@ -86,37 +86,54 @@ function pickDay(i){
  const Sat={title:'Rope technique + relaxed cardio',tag:'CARDIO · TECHNIQUE',icon:'↝',minutes:40,intro:'Rope work builds rhythm and coordination. Double-unders are optional only if your technique is already comfortable.',sections:[S('Warm up · 6 min',6,[H('satwarm','Easy walk + ankle circles','6 min','Prepare your calves and ankles gradually.')]),S('Technique · 10 min',10,[isRope?H('rope','Jump rope: relaxed intervals','6 × 40 sec easy + rest','Keep jumps small, soft and controlled. Optional brief double-under practice only when fresh.',10):H('foot','Footwork rhythm drills','10 min','Gentle step patterns without a rope; no fast impact work.',10)]),S('Aerobic · 16 min',16,[H('easycardio',isRun?'Easy jog or walk':'Brisk walk','16 min','Comfortable conversational pace. No sprinting requirement.',16)]),S('Lower-leg care + mobility · 8 min',8,[H('shin','Easy tibialis raises against a wall','2 × 10–12','Stand with your back lightly supported, heels grounded, raise your toes gently. No pain or forced repetitions.',4,'stability'),H('calves','Calf, ankle, hip recovery','4 min','Gentle mobility, stop if any joint hurts.',4)])]};
  const Sun={title:'Complete rest',tag:'REST · IMPORTANT',icon:'◡',minutes:0,intro:'Rest is part of the programme. There is nothing you need to complete today. Enjoy regular meals, hydration and sufficient sleep; for teens, guidance suggests 8–10 hours.',sections:[]};
  const End={title:'Year review + recovery',tag:'REFLECT · REST',icon:'✦',minutes:20,intro:'You reached the final day. Look back at what you learned, celebrate your consistency, and plan your next cycle.',sections:[S('Reflect · optional',20,[H('review','Review your training journal','10 min','Identify the movements that feel more controlled, not just scores.'),H('restyear','Optional gentle walk + mobility','10 min','Take a break if you prefer.')])]};
- // Modest strength progression, while preserving Day 1's completed checklist.
- const extraPrimarySet=(base,id,minutes)=>({
-   ...base,
-   intro:base.intro+' Make the last couple of repetitions feel challenging while keeping technique smooth; do not train to failure.',
-   sections:base.sections.map(sec=>{
-     if(!sec.items.some(ex=>ex.id===id))return sec;
-     return {
-       ...sec, mins:sec.mins+minutes,
-       title:sec.title.replace(/(\d+) min/,(_,n)=>String(Number(n)+minutes)+' min'),
-       items:sec.items.map(ex=>ex.id===id?{
-         ...ex,
-         dose:ex.dose.replace(/^2 ×/,'3 ×'),
-         minutes:ex.minutes+minutes,
-         cue:ex.cue+' Use controlled resistance that leaves about two good repetitions in reserve. Ask gym staff for help choosing a suitable load.'
-       }:ex)
-     };
-   })
- });
- const nextA=extraPrimarySet(A,'press',2);
- const nextC=extraPrimarySet(C,'bench',2);
- const nextB=extraPrimarySet(B,'apull',2);
+ // Progress all comparable sessions throughout the year, not just the first week.
+ // More volume only on main strength days; the three recovery/cardio days stay easier.
+ const extraSets=(base, ids)=>{
+   const modified=base.sections.map(sec=>{
+     let extraMins=0;
+     const items=sec.items.map(ex=>{
+       if(!ids.includes(ex.id)||!ex.dose.startsWith('2 ×'))return ex;
+       extraMins+=2;
+       return {...ex,dose:ex.dose.replace(/^2 ×/,'3 ×'),minutes:ex.minutes+2,
+         cue:ex.cue+' The last two repetitions should be challenging but controlled. Rest about 1–2 minutes between sets.'};
+     });
+     return extraMins?{...sec,mins:sec.mins+extraMins,
+       title:sec.title.replace(/(\d+) min/,(_,n)=>(Number(n)+extraMins)+' min'),items}:sec;
+   });
+   return {...base,sections:modified,intro:base.intro+' Work at a manageable challenge: finish with about two good repetitions left, not complete exhaustion.'};
+ };
+ const nextA=extraSets(A,['press','split','row']);
+ const nextB=extraSets(B,['apull','rdl']);
+ const nextC=extraSets(C,['bench','squat']);
+ const nextHomeB=extraSets(HomeB,['homepush','homesplit']);
  nextB.sections=nextB.sections.map(sec=>{
    if(!sec.items.some(ex=>ex.id==='apull'))return sec;
-   return {
-     ...sec, mins:sec.mins+5,
-     title:sec.title.replace(/(\d+) min/,(_,n)=>String(Number(n)+5)+' min'),
+   return {...sec,mins:sec.mins+5,title:sec.title.replace(/(\d+) min/,(_,n)=>(Number(n)+5)+' min'),
      items:sec.items.flatMap(ex=>ex.id==='apull'?
-       [ex,H('pull-row-extra','Seated cable row','2 × 10–12','Sit tall, pull towards your lower ribs without leaning back, then return slowly. Pick a resistance with about two good repetitions left.',5,'strength')]:[ex])
-   };
+       [ex,H('pull-row-extra','Seated cable row','2 × 10–12','Sit tall, pull the handle to your lower ribs, pause, then let your arms straighten slowly. Do not rock backwards. Keep about two good repetitions in reserve.',5,'strength')]:[ex])};
  });
- let plan=[nextA,Tues,gym2?HomeB:(i===0?B:nextB),Thurs,nextC,Sat,Sun][wd];
+ let plan=[nextA,Tues,gym2?nextHomeB:nextB,Thurs,nextC,Sat,Sun][wd];
+ // Protect the user's already completed first session from checklist changes.
+ if(i===0)plan=B;
+ const dailyHabit=[
+   H('habit-mon','Optional incline press-ups','1 × 6–8 smooth reps','Hands on a sturdy raised surface; body straight; lower chest slowly and press away. Easy warm-up only.',3,'accessory'),
+   H('habit-tue','Optional easy skipping','4 × 30 sec + short rests','Small soft jumps, turn the rope with wrists, breathe easily. Walk or practise rope-free steps instead if preferred.',4,'accessory'),
+   H('habit-wed','Optional incline press-ups','1 × 6–8 smooth reps','Hands supported on a stable raised surface. Keep elbows comfortable and stop well before tiring.',3,'accessory'),
+   H('habit-thu','Optional gentle wall press-ups','1 × 6–8 easy reps','Stand facing a wall, hands at chest height, bend elbows to approach the wall, then gently press away. This is recovery practice, not a workout.',3,'accessory'),
+   H('habit-fri','Optional relaxed rope footwork','4 × 20 sec + rests','Small soft hops or step without a rope to warm up. Keep it gentle before lifting.',3,'accessory'),
+   H('habit-sat','Optional incline press-ups','1 × 6–8 easy reps','Use a sturdy bench-height surface. Stop while it still feels easy; rope and cardio are already your main activity today.',3,'accessory'),
+   H('restwalk','Optional gentle walk or stretching','If you feel like it · 5 min','Sunday is a proper training rest day. A gentle stroll or comfortable stretch is optional, not something you must complete.',0,'accessory')
+ ][wd];
+ if(i!==0&&i!==364){
+   const issue=state.concern!=='none';
+   const habit=issue?H('habit-alternative','Optional easy stroll','3–5 min','Skip press-ups and impact work if an area is uncomfortable. Gentle, pain-free movement only; resting is fine.',3,'accessory'):dailyHabit;
+   if(wd===6){
+     plan={...plan,sections:[...plan.sections,S('Rest-day choice · completely optional',0,[dailyHabit])]};
+   }else if(getReadiness(i)==='good'){
+     const extra=habit.minutes;
+     plan={...plan,sections:[...plan.sections,S('Daily movement habit · optional',extra,[habit])]};
+   }
+ }
  if(i===364)plan=End;
  const effort=state.effort[i-7]||'';
  const blockWeek=week%4;
