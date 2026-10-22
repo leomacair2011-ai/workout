@@ -8,3 +8,16 @@
 .coverage-row strong{display:block;font-size:14px;letter-spacing:-.01em}
 .coverage-row p{color:var(--muted);font-size:12px;line-height:1.55;margin:6px 0 0}
 @media(max-width:700px){.coverage-grid{grid-template-columns:1fr}.bottomnav button{min-width:0;padding:7px 1px;font-size:9px}}
+
+
+/* Step-by-step exercise coaching, readable on mobile and desktop */
+.howto{margin-top:12px;padding:14px 16px;border:1px solid var(--border);border-radius:14px;background:var(--card2);font-size:14px;line-height:1.55}
+.howto-target{color:var(--text);margin-bottom:10px}
+.howto-target strong,.howto-note strong{color:var(--text)}
+.howto-heading{font-size:12px;font-weight:850;letter-spacing:.06em;text-transform:uppercase;color:var(--secondary);margin-bottom:8px}
+.howto ol{margin:0 0 12px 18px;padding:0}
+.howto li{padding-left:4px;margin:0 0 8px}
+.howto li:last-child{margin-bottom:0}
+.howto-note{border-top:1px solid var(--border);padding-top:10px;color:var(--muted)}
+.workout .exercise-main{min-width:0}
+@media(max-width:600px){.howto{padding:12px}.howto li{line-height:1.5}}
