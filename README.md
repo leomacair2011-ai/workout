@@ -12,16 +12,19 @@ Open `index.html` to see the app locally. Install as a home-screen PWA on Androi
 
 - Personalised onboarding based on goals, gym access, cardio and joint discomfort
 - A year-long 52-week schedule (13 four-week blocks + review day)
-- Three balanced gym strength sessions per week (roughly 60–80 minutes including optional accessories), or a two-day gym variant with a home strength day
+- Three balanced gym strength sessions per week (roughly 70–85 minutes with optional accessories) on Monday, Wednesday and Friday, usually around 4 pm; or a two-gym-day variant with a Wednesday home session
 - Foundation drills for planche, muscle-up and one-arm push-up
 - Manual readiness checkpoints that do *not* unlock advanced exercises just because time passes
 - Two aerobic/rope days, one mobility/balance day and one full rest day each week
-- Slightly more challenging future gym sessions: one additional controlled set for a main lift, plus seated cable rows on pull day; the completed first day stays unchanged
+- A consistent, moderately more challenging strength baseline across the full year: third sets for selected main lifts and extra controlled cable rows on gym pull day, while preserving the completed first day
+- Optional easy daily movement habits (incline press-ups, skipping footwork or wall press-ups); Sunday stays a complete rest day with no required exercise
+- Gradual cardio progression: a maximum of eight extra conversational-pace minutes over time; recovery workouts remain easy
+- Weekly strength progression is based on feedback. When the previous similar session felt comfortable, increase ONE thing: a good repetition or the smallest manageable weight step; never both at once
 - Every fourth week is a lighter consolidation week; accessory circuits are omitted on these weeks and on low-energy days
 - A **Body map** that explains coverage of major muscle groups and small stabilisers (without pretending each individual muscle needs separate training)
 - Bench-press setup and controlled pressing practice (not maximal static holds)
 - Optional low-volume accessories for side delts, scapular control, rotator cuff, arm and wrist muscles, adductors, abductors, soleus, calves and foot/ankle stability
-- Per-exercise checklist, coaching cues, progress, daily notes and training feedback
+- Clear three-step 'How to do it' instructions and muscle/purpose labels for every scheduled exercise, alongside coaching/safety notes, progress tracking, daily notes and feedback
 - Low-energy and pain adaptation, light/dark theme, offline cache, JSON backup/restore
 - No user account, subscription, analytics or external JavaScript needed
 
@@ -31,7 +34,7 @@ This is a general training planner, not medical care or a substitute for qualifi
 
 ## Updating
 
-Edit `app.js` to update the daily training templates, skill stages or annual roadmap; edit `styles.css` for the UI. Change `CACHE` in `sw.js` (e.g. `form365-v4`) when deploying revised files so installed devices update the offline cache. Hosting a GitHub repo via GitHub Pages (or connecting it to Netlify) means future commits can publish updates.
+Edit `app.js` to update the daily training templates, skill stages or annual roadmap; edit `styles.css` for the UI. Change `CACHE` in `sw.js` (e.g. `form365-v5`) when deploying revised files so installed devices update the offline cache. Hosting a GitHub repo via GitHub Pages (or connecting it to Netlify) means future commits can publish updates.
 
 ## Data privacy
 
