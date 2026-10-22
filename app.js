@@ -86,7 +86,37 @@ function pickDay(i){
  const Sat={title:'Rope technique + relaxed cardio',tag:'CARDIO · TECHNIQUE',icon:'↝',minutes:40,intro:'Rope work builds rhythm and coordination. Double-unders are optional only if your technique is already comfortable.',sections:[S('Warm up · 6 min',6,[H('satwarm','Easy walk + ankle circles','6 min','Prepare your calves and ankles gradually.')]),S('Technique · 10 min',10,[isRope?H('rope','Jump rope: relaxed intervals','6 × 40 sec easy + rest','Keep jumps small, soft and controlled. Optional brief double-under practice only when fresh.',10):H('foot','Footwork rhythm drills','10 min','Gentle step patterns without a rope; no fast impact work.',10)]),S('Aerobic · 16 min',16,[H('easycardio',isRun?'Easy jog or walk':'Brisk walk','16 min','Comfortable conversational pace. No sprinting requirement.',16)]),S('Lower-leg care + mobility · 8 min',8,[H('shin','Easy tibialis raises against a wall','2 × 10–12','Stand with your back lightly supported, heels grounded, raise your toes gently. No pain or forced repetitions.',4,'stability'),H('calves','Calf, ankle, hip recovery','4 min','Gentle mobility, stop if any joint hurts.',4)])]};
  const Sun={title:'Complete rest',tag:'REST · IMPORTANT',icon:'◡',minutes:0,intro:'Rest is part of the programme. There is nothing you need to complete today. Enjoy regular meals, hydration and sufficient sleep; for teens, guidance suggests 8–10 hours.',sections:[]};
  const End={title:'Year review + recovery',tag:'REFLECT · REST',icon:'✦',minutes:20,intro:'You reached the final day. Look back at what you learned, celebrate your consistency, and plan your next cycle.',sections:[S('Reflect · optional',20,[H('review','Review your training journal','10 min','Identify the movements that feel more controlled, not just scores.'),H('restyear','Optional gentle walk + mobility','10 min','Take a break if you prefer.')])]};
- let plan=[A,Tues,gym2?HomeB:B,Thurs,C,Sat,Sun][wd];
+ // Modest strength progression, while preserving Day 1's completed checklist.
+ const extraPrimarySet=(base,id,minutes)=>({
+   ...base,
+   intro:base.intro+' Make the last couple of repetitions feel challenging while keeping technique smooth; do not train to failure.',
+   sections:base.sections.map(sec=>{
+     if(!sec.items.some(ex=>ex.id===id))return sec;
+     return {
+       ...sec, mins:sec.mins+minutes,
+       title:sec.title.replace(/(\d+) min/,(_,n)=>String(Number(n)+minutes)+' min'),
+       items:sec.items.map(ex=>ex.id===id?{
+         ...ex,
+         dose:ex.dose.replace(/^2 ×/,'3 ×'),
+         minutes:ex.minutes+minutes,
+         cue:ex.cue+' Use controlled resistance that leaves about two good repetitions in reserve. Ask gym staff for help choosing a suitable load.'
+       }:ex)
+     };
+   })
+ });
+ const nextA=extraPrimarySet(A,'press',2);
+ const nextC=extraPrimarySet(C,'bench',2);
+ const nextB=extraPrimarySet(B,'apull',2);
+ nextB.sections=nextB.sections.map(sec=>{
+   if(!sec.items.some(ex=>ex.id==='apull'))return sec;
+   return {
+     ...sec, mins:sec.mins+5,
+     title:sec.title.replace(/(\d+) min/,(_,n)=>String(Number(n)+5)+' min'),
+     items:sec.items.flatMap(ex=>ex.id==='apull'?
+       [ex,H('pull-row-extra','Seated cable row','2 × 10–12','Sit tall, pull towards your lower ribs without leaning back, then return slowly. Pick a resistance with about two good repetitions left.',5,'strength')]:[ex])
+   };
+ });
+ let plan=[nextA,Tues,gym2?HomeB:(i===0?B:nextB),Thurs,nextC,Sat,Sun][wd];
  if(i===364)plan=End;
  const effort=state.effort[i-7]||'';
  const blockWeek=week%4;
