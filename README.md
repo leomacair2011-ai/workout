@@ -12,10 +12,11 @@ Open `index.html` to see the app locally. Install as a home-screen PWA on Androi
 
 - Personalised onboarding based on goals, gym access, cardio and joint discomfort
 - A year-long 52-week schedule (13 four-week blocks + review day)
-- Three full-body gym strength sessions per week (roughly 60–75 minutes with accessories), or a two-day gym variant with a home strength day
+- Three balanced gym strength sessions per week (roughly 60–80 minutes including optional accessories), or a two-day gym variant with a home strength day
 - Foundation drills for planche, muscle-up and one-arm push-up
 - Manual readiness checkpoints that do *not* unlock advanced exercises just because time passes
 - Two aerobic/rope days, one mobility/balance day and one full rest day each week
+- Slightly more challenging future gym sessions: one additional controlled set for a main lift, plus seated cable rows on pull day; the completed first day stays unchanged
 - Every fourth week is a lighter consolidation week; accessory circuits are omitted on these weeks and on low-energy days
 - A **Body map** that explains coverage of major muscle groups and small stabilisers (without pretending each individual muscle needs separate training)
 - Bench-press setup and controlled pressing practice (not maximal static holds)
