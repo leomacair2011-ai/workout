@@ -9,7 +9,7 @@
     const stored = JSON.parse(localStorage.getItem(CART_KEY) || '{}');
     if (stored && typeof stored === 'object' && !Array.isArray(stored)) {
       for (const [id, qty] of Object.entries(stored)) {
-        if (byId(id) && Number.isInteger(qty) && qty > 0) cart.set(id, Math.min(qty, 99));
+        if (/^[a-z0-9-]{1,90}$/.test(id) && Number.isInteger(qty) && qty > 0) cart.set(id, Math.min(qty, 99));
       }
     }
   } catch (_) { /* Basket still works when browser storage is blocked. */ }
@@ -210,4 +210,89 @@
   renderProducts();
   renderSaved();
   renderCart();
+  (function extendApexCatalogue() {
+  const money = value => ' + value.toFixed(2);
+  const productRender = renderProducts;
+  renderProducts = function() {
+    productRender();
+    for (const card of document.querySelectorAll('#products .product')) {
+      const id = card.querySelector('[data-save]')?.dataset.save;
+      const product = byId(id);
+      const footer = card.querySelector('.product-footer');
+      if (!product || !footer || !Number.isFinite(product.priceFrom)) continue;
+      const price = document.createElement('p');
+      price.className = 'apex-price-from';
+      price.textContent = 'From ' + money(product.priceFrom) + ' USD';
+      footer.parentElement.insertBefore(price, footer);
+    }
+  };
+  const cartRender = renderCart;
+  renderCart = function() {
+    cartRender();
+    const visibleProducts = [...cart.entries()].map(([id, qty]) => ({ p: byId(id), qty })).filter(x => x.p);
+    const rows = document.querySelectorAll('#basketItems .apex-cart-row');
+    visibleProducts.forEach(({ p }, index) => {
+      const small = rows[index]?.querySelector('.apex-cart-info small');
+      if (small && Number.isFinite(p.priceFrom)) small.textContent = 'From ' + money(p.priceFrom) + ' USD per item';
+    });
+    const allPriced = visibleProducts.length > 0 && visibleProducts.every(x => Number.isFinite(x.p.priceFrom));
+    const minimum = visibleProducts.reduce((sum, x) => sum + (x.p.priceFrom || 0) * x.qty, 0);
+    const label = drawer.querySelector('.apex-cart-totals:nth-child(2) span');
+    const value = drawer.querySelector('.apex-cart-totals:nth-child(2) strong');
+    if (label) label.textContent = 'Estimated minimum';
+    if (value) value.textContent = allPriced ? money(minimum) + '+ USD' : 'Awaiting prices';
+  };
+  const preview = openPreview;
+  openPreview = function(id) {
+    preview(id);
+    const product = byId(id);
+    if (product && Number.isFinite(product.priceFrom)) {
+      document.getElementById('previewSubtitle').textContent += ' · From ' + money(product.priceFrom) + ' USD';
+    }
+  };
+
+  async function loadFullCatalogue() {
+    const response = await fetch('./catalogue.json', { cache: 'no-cache' });
+    if (!response.ok) throw new Error('Catalogue unavailable');
+    const catalogue = await response.json();
+    if (!Array.isArray(catalogue.products) || catalogue.products.length < 12) throw new Error('Incomplete catalogue');
+    const originals = new Map(products.map(p => [p.slug, p]));
+    const loaded = [];
+    const used = new Set();
+    for (const entry of catalogue.products.slice(0, 250)) {
+      if (!entry || typeof entry.slug !== 'string' || !/^[a-z0-9-]{1,90}$/.test(entry.slug) || used.has(entry.slug)) continue;
+      if (typeof entry.name !== 'string' || typeof entry.cat !== 'string') continue;
+      used.add(entry.slug);
+      const original = originals.get(entry.slug);
+      const numericPrice = Number(entry.minPriceUSD);
+      loaded.push({
+        id: original?.id || entry.slug,
+        slug: entry.slug,
+        name: entry.name.replace(/\s*\(OUR BESTSELLER\)/gi, '').trim(),
+        cat: entry.cat,
+        desc: original?.desc || entry.desc || 'Digital software and subscription options.',
+        icon: original?.icon || (/^https:\/\/static\.mysellauth\.com\//.test(entry.icon) ? entry.icon : ''),
+        swatch: original?.swatch || entry.swatch || '#d8d9d1',
+        priceFrom: Number.isFinite(numericPrice) && numericPrice > 0 ? numericPrice : undefined
+      });
+    }
+    if (loaded.length < 12) throw new Error('Catalogue could not be imported');
+    products.splice(0, products.length, ...loaded);
+    for (const p of loaded) if (!categories.includes(p.cat)) categories.push(p.cat);
+    if (selectedCat !== 'All products' && !categories.includes(selectedCat)) selectedCat = 'All products';
+    try {
+      const storedSaved = JSON.parse(localStorage.getItem('apex-editorial-saved') || '[]');
+      saved.clear();
+      if (Array.isArray(storedSaved)) for (const id of storedSaved) if (byId(id)) saved.add(id);
+    } catch (_) {}
+    const intro = document.querySelector('#collection .section-note');
+    if (intro) intro.textContent = `${loaded.length} product listings. Prices in USD are starting prices from the published catalogue; plans and availability can change.`;
+    const help = document.querySelector('#help .section-note');
+    if (help) help.textContent = 'Explore the full catalogue, save products and manage your basket here. Starting prices are shown for reference. Secure payment, delivery and store policies need to be configured before purchases are accepted.';
+    renderProducts();
+    renderSaved();
+    renderCart();
+  }
+  loadFullCatalogue().catch(error => console.warn('Could not import full Apex Access catalogue:', error));
+})();
 })();
