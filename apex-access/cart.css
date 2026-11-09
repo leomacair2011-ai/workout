@@ -40,3 +40,6 @@
 #previewLink{border:0}
 @media(max-width:800px){.apex-basket-sheet{padding:23px 18px 19px}.apex-basket-button{flex:0 0 39px}.product-footer button.apex-add-button{font-size:10px;padding:8px}.apex-cart-items{margin-top:13px}}
 @media(max-width:420px){.product-footer{flex-wrap:wrap;gap:9px}.product-footer button[data-preview]{margin-left:auto}.apex-basket-button{width:35px;height:35px;flex-basis:35px}}
+
+.apex-price-from{font-size:13px;font-weight:850;letter-spacing:-.015em;color:var(--text);margin:4px 0 14px}
+.apex-cart-totals:nth-child(2) strong{font-size:13px}
