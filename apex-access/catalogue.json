@@ -1,0 +1,818 @@
+{
+  "source": "Original Apex Access SellAuth publicly displayed catalogue",
+  "capturedAt": "2026-11-09",
+  "currency": "USD",
+  "priceNote": "Displayed starting prices only. Product variants and exact checkout charges are not included.",
+  "products": [
+    {
+      "slug": "claude-ai",
+      "name": "Claude AI (OUR BESTSELLER)",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134714.webp",
+      "swatch": "hsl(187 25% 76%)"
+    },
+    {
+      "slug": "lovable-ai",
+      "name": "Lovable AI",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136738.webp",
+      "swatch": "hsl(44 25% 76%)"
+    },
+    {
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 59.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134718.webp",
+      "swatch": "hsl(261 25% 76%)"
+    },
+    {
+      "slug": "cursor-ai-premium",
+      "name": "Cursor AI Premium",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 79,
+      "icon": "https://static.mysellauth.com/storage/images/1134711.webp",
+      "swatch": "hsl(167 25% 76%)"
+    },
+    {
+      "slug": "spotify",
+      "name": "Spotify",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134717.webp",
+      "swatch": "hsl(346 25% 76%)"
+    },
+    {
+      "slug": "capcut-pro-lifetime",
+      "name": "CapCut Pro",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134715.webp",
+      "swatch": "hsl(102 25% 76%)"
+    },
+    {
+      "slug": "xbox-game-pass-ultimate",
+      "name": "Xbox Game Pass Ultimate",
+      "cat": "Gaming",
+      "desc": "Digital gaming access and entertainment options.",
+      "minPriceUSD": 16.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134719.webp",
+      "swatch": "hsl(26 25% 76%)"
+    },
+    {
+      "slug": "semrush",
+      "name": "Semrush",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 259.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134683.webp",
+      "swatch": "hsl(185 25% 76%)"
+    },
+    {
+      "slug": "perplexity-premium",
+      "name": "Perplexity Pro",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 49.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134712.webp",
+      "swatch": "hsl(286 25% 76%)"
+    },
+    {
+      "slug": "gemini-ai",
+      "name": "Gemini Advanced + 2TB Google One (1-Year Top-Up)",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134707.webp",
+      "swatch": "hsl(80 25% 76%)"
+    },
+    {
+      "slug": "brilliant",
+      "name": "Brilliant",
+      "cat": "Learning",
+      "desc": "Digital learning and education options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134706.webp",
+      "swatch": "hsl(143 25% 76%)"
+    },
+    {
+      "slug": "heygenai",
+      "name": "HeygenAI",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134708.webp",
+      "swatch": "hsl(286 25% 76%)"
+    },
+    {
+      "slug": "askai",
+      "name": "ASK.AI",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134700.webp",
+      "swatch": "hsl(103 25% 76%)"
+    },
+    {
+      "slug": "proton-vpn",
+      "name": "Proton Vpn",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 20.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134703.webp",
+      "swatch": "hsl(237 25% 76%)"
+    },
+    {
+      "slug": "coursera",
+      "name": "Coursera",
+      "cat": "Learning",
+      "desc": "Digital learning and education options.",
+      "minPriceUSD": 69.9,
+      "icon": "https://static.mysellauth.com/storage/images/1134698.webp",
+      "swatch": "hsl(164 25% 76%)"
+    },
+    {
+      "slug": "dzsports-tv",
+      "name": "DSports Tv",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 39.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134699.webp",
+      "swatch": "hsl(232 25% 76%)"
+    },
+    {
+      "slug": "dream-4k-iptv",
+      "name": "Dream 4k Iptv",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 18,
+      "icon": "https://static.mysellauth.com/storage/images/1134701.webp",
+      "swatch": "hsl(3 25% 76%)"
+    },
+    {
+      "slug": "eset",
+      "name": "Eset",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134697.webp",
+      "swatch": "hsl(239 25% 76%)"
+    },
+    {
+      "slug": "adesk",
+      "name": "Adesk",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134704.webp",
+      "swatch": "hsl(80 25% 76%)"
+    },
+    {
+      "slug": "jarvis-ai",
+      "name": "Jarvis Ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134705.webp",
+      "swatch": "hsl(226 25% 76%)"
+    },
+    {
+      "slug": "jetbrains",
+      "name": "Jetbrains",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 49.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134694.webp",
+      "swatch": "hsl(166 25% 76%)"
+    },
+    {
+      "slug": "malwarebytes-premium",
+      "name": "Malwarebytes premium",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134693.webp",
+      "swatch": "hsl(244 25% 76%)"
+    },
+    {
+      "slug": "notegpt",
+      "name": "NoteGPT",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134688.webp",
+      "swatch": "hsl(47 25% 76%)"
+    },
+    {
+      "slug": "meshy-ai",
+      "name": "Mesh Ai",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134686.webp",
+      "swatch": "hsl(331 25% 76%)"
+    },
+    {
+      "slug": "scispace",
+      "name": "Scispace",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134684.webp",
+      "swatch": "hsl(309 25% 76%)"
+    },
+    {
+      "slug": "shahid",
+      "name": "Shahid",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 21.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134682.webp",
+      "swatch": "hsl(335 25% 76%)"
+    },
+    {
+      "slug": "kling-ai",
+      "name": "Kling Ai",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 49.99,
+      "icon": "https://static.mysellauth.com/storage/images/1134680.webp",
+      "swatch": "hsl(300 25% 76%)"
+    },
+    {
+      "slug": "google-one-ai",
+      "name": "Google One Ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136584.webp",
+      "swatch": "hsl(333 25% 76%)"
+    },
+    {
+      "slug": "expressvpn",
+      "name": "ExpressVpn",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 22.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136587.webp",
+      "swatch": "hsl(154 25% 76%)"
+    },
+    {
+      "slug": "surfshark",
+      "name": "Surfshark",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 20.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136596.webp",
+      "swatch": "hsl(335 25% 76%)"
+    },
+    {
+      "slug": "midjourney",
+      "name": "Midjourney",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136604.webp",
+      "swatch": "hsl(322 25% 76%)"
+    },
+    {
+      "slug": "tunnelbear",
+      "name": "TunnelBear",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 21.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136728.webp",
+      "swatch": "hsl(176 25% 76%)"
+    },
+    {
+      "slug": "replit-ai",
+      "name": "Replit Ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 49.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136586.webp",
+      "swatch": "hsl(249 25% 76%)"
+    },
+    {
+      "slug": "notion-ai",
+      "name": "Notion Ai",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136736.webp",
+      "swatch": "hsl(50 25% 76%)"
+    },
+    {
+      "slug": "suno-ai",
+      "name": "Suno Ai",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136588.webp",
+      "swatch": "hsl(260 25% 76%)"
+    },
+    {
+      "slug": "youtube-premium",
+      "name": "YouTube Premium",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136721.webp",
+      "swatch": "hsl(279 25% 76%)"
+    },
+    {
+      "slug": "disney",
+      "name": "Disney+",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 15.59,
+      "icon": "https://static.mysellauth.com/storage/images/1136583.webp",
+      "swatch": "hsl(236 25% 76%)"
+    },
+    {
+      "slug": "netflix",
+      "name": "Netflix",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 23.39,
+      "icon": "https://static.mysellauth.com/storage/images/1136603.webp",
+      "swatch": "hsl(246 25% 76%)"
+    },
+    {
+      "slug": "hbo-max",
+      "name": "HBO Max",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136585.webp",
+      "swatch": "hsl(252 25% 76%)"
+    },
+    {
+      "slug": "boltnew",
+      "name": "Bolt.new",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 24.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136589.webp",
+      "swatch": "hsl(269 25% 76%)"
+    },
+    {
+      "slug": "gamma-ai",
+      "name": "Gamma Ai",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136732.webp",
+      "swatch": "hsl(246 25% 76%)"
+    },
+    {
+      "slug": "n8nio",
+      "name": "N8n.io",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136598.webp",
+      "swatch": "hsl(156 25% 76%)"
+    },
+    {
+      "slug": "trading-view",
+      "name": "Trading View",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 24.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136731.webp",
+      "swatch": "hsl(279 25% 76%)"
+    },
+    {
+      "slug": "dramabox",
+      "name": "Dramabox",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136606.webp",
+      "swatch": "hsl(18 25% 76%)"
+    },
+    {
+      "slug": "cyberghost-vpn",
+      "name": "Cyberghost vpn",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136600.webp",
+      "swatch": "hsl(261 25% 76%)"
+    },
+    {
+      "slug": "manus-ai",
+      "name": "Manus Ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 24.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136608.webp",
+      "swatch": "hsl(285 25% 76%)"
+    },
+    {
+      "slug": "black-box-ai",
+      "name": "Black box ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136590.webp",
+      "swatch": "hsl(70 25% 76%)"
+    },
+    {
+      "slug": "higgsfield",
+      "name": "Higgsfield",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 24.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136601.webp",
+      "swatch": "hsl(298 25% 76%)"
+    },
+    {
+      "slug": "dazn",
+      "name": "DAZN",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 24.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136597.webp",
+      "swatch": "hsl(147 25% 76%)"
+    },
+    {
+      "slug": "iptv-dino",
+      "name": "DINO IPTV",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 13.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136718.webp",
+      "swatch": "hsl(326 25% 76%)"
+    },
+    {
+      "slug": "pixiv",
+      "name": "PIXIV",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 2.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136581.webp",
+      "swatch": "hsl(280 25% 76%)"
+    },
+    {
+      "slug": "moonshot-ai",
+      "name": "Moonshot Ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 25.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136602.webp",
+      "swatch": "hsl(162 25% 76%)"
+    },
+    {
+      "slug": "character-ai",
+      "name": "Character Ai",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 13.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136593.webp",
+      "swatch": "hsl(324 25% 76%)"
+    },
+    {
+      "slug": "osn",
+      "name": "OSN",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136582.webp",
+      "swatch": "hsl(168 25% 76%)"
+    },
+    {
+      "slug": "mubitv",
+      "name": "MUBITV",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136605.webp",
+      "swatch": "hsl(129 25% 76%)"
+    },
+    {
+      "slug": "supergrok",
+      "name": "SuperGrok",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 35.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136557.webp",
+      "swatch": "hsl(182 25% 76%)"
+    },
+    {
+      "slug": "apple-tv",
+      "name": "Apple TV",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 7.29,
+      "icon": "https://static.mysellauth.com/storage/images/1136569.webp",
+      "swatch": "hsl(247 25% 76%)"
+    },
+    {
+      "slug": "leonardo-ai",
+      "name": "LEONARDO AI",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 49.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136571.webp",
+      "swatch": "hsl(77 25% 76%)"
+    },
+    {
+      "slug": "rtl",
+      "name": "RTL",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136561.webp",
+      "swatch": "hsl(214 25% 76%)"
+    },
+    {
+      "slug": "snapchat",
+      "name": "Snapchat",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136564.webp",
+      "swatch": "hsl(110 25% 76%)"
+    },
+    {
+      "slug": "ibo-tv",
+      "name": "IBO TV",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136553.webp",
+      "swatch": "hsl(319 25% 76%)"
+    },
+    {
+      "slug": "tinder",
+      "name": "Tinder",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 19.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136554.webp",
+      "swatch": "hsl(98 25% 76%)"
+    },
+    {
+      "slug": "linkedin",
+      "name": "LINKEDIN",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 49.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136556.webp",
+      "swatch": "hsl(18 25% 76%)"
+    },
+    {
+      "slug": "apple-music",
+      "name": "APPLE MUSIC",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136567.webp",
+      "swatch": "hsl(200 25% 76%)"
+    },
+    {
+      "slug": "elevenlabs",
+      "name": "ElevenLabs",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 11.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136570.webp",
+      "swatch": "hsl(191 25% 76%)"
+    },
+    {
+      "slug": "prime-12-months",
+      "name": "Amazon Prime",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136573.webp",
+      "swatch": "hsl(45 25% 76%)"
+    },
+    {
+      "slug": "paramount",
+      "name": "Paramount",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136568.webp",
+      "swatch": "hsl(289 25% 76%)"
+    },
+    {
+      "slug": "duolingo",
+      "name": "Duolingo",
+      "cat": "Learning",
+      "desc": "Digital learning and education options.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136555.webp",
+      "swatch": "hsl(95 25% 76%)"
+    },
+    {
+      "slug": "crunchyroll",
+      "name": "Crunchyroll - WorldWide",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 15.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136572.webp",
+      "swatch": "hsl(355 25% 76%)"
+    },
+    {
+      "slug": "nba",
+      "name": "NBA",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136566.webp",
+      "swatch": "hsl(175 25% 76%)"
+    },
+    {
+      "slug": "steam-account",
+      "name": "Steam — Account",
+      "cat": "Gaming",
+      "desc": "Digital gaming access and entertainment options.",
+      "minPriceUSD": 4.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136560.webp",
+      "swatch": "hsl(36 25% 76%)"
+    },
+    {
+      "slug": "filmora-12-months",
+      "name": "Wondershare Filmora",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 8.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136559.webp",
+      "swatch": "hsl(80 25% 76%)"
+    },
+    {
+      "slug": "amc",
+      "name": "AMC+",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 21.59,
+      "icon": "https://static.mysellauth.com/storage/images/1136558.webp",
+      "swatch": "hsl(175 25% 76%)"
+    },
+    {
+      "slug": "nordvpn",
+      "name": "NordVPN",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 19.79,
+      "icon": "https://static.mysellauth.com/storage/images/1136562.webp",
+      "swatch": "hsl(185 25% 76%)"
+    },
+    {
+      "slug": "office-365",
+      "name": "Office 365",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 23.39,
+      "icon": "https://static.mysellauth.com/storage/images/1136565.webp",
+      "swatch": "hsl(209 25% 76%)"
+    },
+    {
+      "slug": "canva-12",
+      "name": "Canva",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 9.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136537.webp",
+      "swatch": "hsl(175 25% 76%)"
+    },
+    {
+      "slug": "figma",
+      "name": "Figma",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136533.webp",
+      "swatch": "hsl(348 25% 76%)"
+    },
+    {
+      "slug": "scribd",
+      "name": "Scribd",
+      "cat": "Learning",
+      "desc": "Digital learning and education options.",
+      "minPriceUSD": 16.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136542.webp",
+      "swatch": "hsl(113 25% 76%)"
+    },
+    {
+      "slug": "espn",
+      "name": "ESPN+",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136547.webp",
+      "swatch": "hsl(354 25% 76%)"
+    },
+    {
+      "slug": "quillbot-premium",
+      "name": "QuillBot Premium",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 23.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136536.webp",
+      "swatch": "hsl(304 25% 76%)"
+    },
+    {
+      "slug": "github-premium",
+      "name": "GitHub Premium",
+      "cat": "AI & Development",
+      "desc": "AI software, coding and development tools.",
+      "minPriceUSD": 39.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136539.webp",
+      "swatch": "hsl(345 25% 76%)"
+    },
+    {
+      "slug": "veedio-premium",
+      "name": "VEED IO Premium",
+      "cat": "Design & Creative",
+      "desc": "Creative software and digital production tools.",
+      "minPriceUSD": 37.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136722.webp",
+      "swatch": "hsl(184 25% 76%)"
+    },
+    {
+      "slug": "grammarly-premium",
+      "name": "Grammarly Premium",
+      "cat": "Productivity",
+      "desc": "Research, work and productivity software options.",
+      "minPriceUSD": 18.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136544.webp",
+      "swatch": "hsl(352 25% 76%)"
+    },
+    {
+      "slug": "directv-12-months",
+      "name": "DirecTV",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 21.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136725.webp",
+      "swatch": "hsl(241 25% 76%)"
+    },
+    {
+      "slug": "ip-vanish",
+      "name": "IP Vanish",
+      "cat": "Privacy & Security",
+      "desc": "Privacy, protection and security software options.",
+      "minPriceUSD": 14.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136541.webp",
+      "swatch": "hsl(73 25% 76%)"
+    },
+    {
+      "slug": "peacock",
+      "name": "Peacock",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 25.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136540.webp",
+      "swatch": "hsl(138 25% 76%)"
+    },
+    {
+      "slug": "hulu",
+      "name": "Hulu",
+      "cat": "Entertainment",
+      "desc": "Music and entertainment subscription options.",
+      "minPriceUSD": 29.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136546.webp",
+      "swatch": "hsl(178 25% 76%)"
+    },
+    {
+      "slug": "ufc",
+      "name": "UFC",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 34.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136538.webp",
+      "swatch": "hsl(114 25% 76%)"
+    },
+    {
+      "slug": "wwe",
+      "name": "WWE",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 16.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136543.webp",
+      "swatch": "hsl(237 25% 76%)"
+    },
+    {
+      "slug": "nfl",
+      "name": "NFL",
+      "cat": "Sports & TV",
+      "desc": "Sports and television entertainment options.",
+      "minPriceUSD": 17.99,
+      "icon": "https://static.mysellauth.com/storage/images/1136545.webp",
+      "swatch": "hsl(160 25% 76%)"
+    }
+  ]
+}
