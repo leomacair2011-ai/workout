@@ -211,7 +211,7 @@
   renderSaved();
   renderCart();
   (function extendApexCatalogue() {
-  const money = value => ' + value.toFixed(2);
+  const money = value => '$' + value.toFixed(2);
   const productRender = renderProducts;
   renderProducts = function() {
     productRender();
